@@ -3,6 +3,9 @@
       <e-series [dataSource]='chartData' type='Line' xName='x' yName='y' name='Sales'></e-series>
   </e-series-collection>
 </ejs-chart> -->
+<!-- <div><input type="datetime-local" (input)="myClickFunction2($event)"  id="datetime1"> 
+  <input type="datetime-local" (input)="myClickFunction4($event)"  id="datetime2">
+  <button class="btn btn-dark" (click)="onView()">View</button> </div> -->
 <div><canvas #canvas width="600" height="300">{{ chart }}</canvas> 
 <canvas #canvasCpu width="600" height="300">{{ chartCpu }}</canvas>
 <canvas #canvasPower width="600" height="300">{{ chartPower }}</canvas></div>

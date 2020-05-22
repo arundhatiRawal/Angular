@@ -33,12 +33,10 @@
               Change Host
             </button> 
             <button type="button" class="btn btn-block btn-lg btn-dark" id="button2">Real-Time Analysis</button>
-            <select [(ngModel)]="SelectedHostname" class="form-control form-control-lg" id="sel1">
-              <option>PC 1</option>
-              <option>PC 99</option>
-              <option>PC 101</option>
-              <option>IT 100</option>
+            <select class="form-control form-control-lg" id="sel1" (change)="myClickFunction($event)">
+              <option *ngFor="let name of hostnameList; let i = index" value="{{i}}">{{name}}</option>
             </select>
+
             
           </div>
           
@@ -54,18 +52,22 @@
   
   <div class="select">
     
-    <select [(ngModel)]="selectedOption" class="form-control form-control-lg" id="sel2">
+    <select class="form-control form-control-lg"  id="sel2" (change)="myClickFunction3($event)">
       <option>1 hour</option>
-      <option>1 day</option>
-      <option>1 month</option>
-      <option>3 months</option>
+      <option>6 hours</option>
+      <option>12 hours</option>
+      <option>24 hours</option>
     </select>
-    <input type="datetime-local" id="datetime">
+    <input type="datetime-local" (input)="myClickFunction2($event)"  id="datetime1"> 
+    <input type="datetime-local" (input)="myClickFunction4($event)"  id="datetime2"> 
+
+
   </div>
+  <button class="btn btn-dark" (click)="onView()"><a routerLink="/historic/chartDisplay">View</a></button>
   
   
 
 
-
+<router-outlet></router-outlet>
 </div><br><br>
 </body>

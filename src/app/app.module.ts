@@ -27,6 +27,7 @@ import { PowerService } from './power/power.service';
 import { ChartDisplayComponent } from './chart-display/chart-display.component';
 import { ChartModule } from '@syncfusion/ej2-angular-charts';
 import {ChartDisplayService} from './chart-display/chart-display.service'
+import {HistoricService} from './historic/historic.service'
 import { DateTimeService, LineSeriesService, DateTimeCategoryService, StripLineService} from '@syncfusion/ej2-angular-charts';
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { DateTimeService, LineSeriesService, DateTimeCategoryService, StripLineS
     HttpClientModule,
     ChartModule
   ],
-  providers: [ChartDisplayService,HomeService,DisplayHostnameService,CpuService,DiskService,MemoryService,TopRamService,TopDiskService, PowerService,DateTimeService, LineSeriesService, DateTimeCategoryService, StripLineService],
+  providers: [HistoricService,ChartDisplayService,HomeService,DisplayHostnameService,CpuService,DiskService,MemoryService,TopRamService,TopDiskService, PowerService,DateTimeService, LineSeriesService, DateTimeCategoryService, StripLineService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

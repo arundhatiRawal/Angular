@@ -22,7 +22,10 @@ const routes: Routes = [
   { path: 'memorylist', component: TopMemoryComponent  },
   { path: 'historic', component: HistoricComponent},
   { path: 'power', component: PowerComponent},
-  { path: 'chartDisplay', component: ChartDisplayComponent}
+  { path: 'historic', component: HistoricComponent,
+    children: [{ path: 'chartDisplay', component: ChartDisplayComponent}]
+  },
+
 
 ];
 
