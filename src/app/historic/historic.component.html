@@ -1,0 +1,71 @@
+<head>
+  <title>Historic Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="jumbotron">
+  <div class="well" id="divWellAboveHost">
+    <h3 id="name">Showing for host @ {{SelectedHostname}}</h3>
+    <div class="row">
+      <div class="form-group">
+        <div id="abovedrop">
+          <div class="dropdown">
+             <button type="button" class="btn btn-dark" id="button1">
+              Change Host
+            </button> 
+            <button type="button" class="btn btn-block btn-lg btn-dark" id="button2">Real-Time Analysis</button>
+            <select [(ngModel)]="SelectedHostname" class="form-control form-control-lg" id="sel1">
+              <option>PC 1</option>
+              <option>PC 99</option>
+              <option>PC 101</option>
+              <option>IT 100</option>
+            </select>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+  
+<div class="container-fluid bg-3 text-center">    
+  <h3 id="timeSet">Preset time intervals</h3>
+  <h3 id=timeSet2>Select Date and Time</h3>
+  
+  <div class="select">
+    
+    <select [(ngModel)]="selectedOption" class="form-control form-control-lg" id="sel2">
+      <option>1 hour</option>
+      <option>1 day</option>
+      <option>1 month</option>
+      <option>3 months</option>
+    </select>
+    <input type="datetime-local" id="datetime">
+  </div>
+  
+  
+
+
+
+</div><br><br>
+</body>

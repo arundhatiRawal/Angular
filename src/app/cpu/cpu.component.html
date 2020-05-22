@@ -1,0 +1,79 @@
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav hidden-xs">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link" id="v-pills-menu-tab" data-toggle="pill" role="tab" aria-selected="true">Parameters</a>
+        <a class="nav-link" routerLink="/realTime" id="v-pills-param-tab" data-toggle="pill" role="tab"  aria-selected="false">Summary</a>
+        <a class="nav-link active" routerLink="/cpu" id="v-pills-cpu-tab" data-toggle="pill" role="tab"  aria-selected="true">CPU</a>
+        <a class="nav-link" routerLink="/disk" id="v-pills-disk-tab" data-toggle="pill"  role="tab"  aria-selected="false">Disk</a>
+        <a class="nav-link" routerLink="/memory" id="v-pills-memory-tab" data-toggle="pill" role="tab"  aria-selected="false">Memory</a>
+        <a class="nav-link" routerLink="/disklist" id="v-pills-datalist-tab" data-toggle="pill" role="tab"  aria-selected="false">Top Disk</a>
+        <a class="nav-link" routerLink="/memorylist" id="v-pills-memorylist-tab" data-toggle="pill" role="tab"  aria-selected="false">Top Memory</a>
+        <a class="nav-link" routerLink="/power" id="v-pills-memorylist-tab" data-toggle="pill" role="tab"  aria-selected="false">Power</a>
+      </div>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <app-display-hostname></app-display-hostname>
+      <h3>CPU</h3>
+      <div class="row" id="divrow">
+        <div class="col-sm-3">
+          <div class="well" id="cpuwell">
+            <h4>CPU</h4>
+            <table class="table table-bordered success">
+              <tr>
+                <th *ngFor = "let column of displayedColumns">
+                  {{column}}
+                </th>
+              </tr>
+              <tr *ngFor="let data of cpu">
+                <td>{{ data.timestamp }}</td>
+                <td>{{ data.cpu }}</td>
+                <td>{{ data.userPercent }}</td>
+                <td>{{ data.nicePercent }}</td>
+                <td>{{ data.sysPercent }}</td>
+                <td>{{ data.ioPercent }}</td>
+                <td>{{ data.softPercent }}</td>
+                <td>{{ data.idlePercent }}</td>
+              </tr>
+          </table>   
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+</body>
+
+

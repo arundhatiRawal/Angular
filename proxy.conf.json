@@ -1,0 +1,74 @@
+{
+    "/apiDisk": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiDisk": "http://localhost:8082/infra/disk"
+        }
+    },
+    "/apiCpu": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiCpu": "http://localhost:8082/infra/cpu"
+        }
+    },
+    "/apiMemory": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiMemory": "http://localhost:8082/infra/memory"
+        }
+    },
+    "/apiTopDisk": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiTopDisk": "http://localhost:8082/infra/topDisk"
+        }
+    },
+    "/apiTopMemory": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiTopMemory": "http://localhost:8082/infra/topMemory"
+        }
+    },
+    "/apiPower": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiPower": "http://localhost:8082/infra/power"
+        }
+    },
+    "/apiChartDisplay": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiChartDisplay": "http://localhost:8082/infra/chartDisplay"
+        }
+    },
+    "/apiChartPower": {
+        "target": "http://localhost:8082",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/apiChartPower": "http://localhost:8082/infra/chartPower"
+        }
+    }
+}

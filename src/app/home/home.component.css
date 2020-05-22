@@ -1,0 +1,56 @@
+
+ body{
+    background: url("https://responseit.ca/wp-content/uploads/2015/03/AbstractWeb.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+} 
+
+#button1,#button2{
+    display:inline-block;
+}
+#button1{
+    width: 200px;
+    height: 5px;
+    height: 50px;
+    margin-left: 450px;
+    
+}
+
+#button2{
+    width: 200px;
+    height: 50px;
+    margin-left: 150px;
+}
+.form-control{
+    font-size: 24px;
+}
+
+
+
+form{
+    margin-left: 450px;
+    margin-top: 200px;
+}
+select#sel1{
+    width: 550px;
+    margin-left: 0px;
+    height: 50px;
+    padding-left: 12px;
+    border-left-width: 1px;
+}
+.btn{
+    color:white;
+    background-color: black;
+    border-color: white;
+}
+.btn:hover{
+    color: white;
+    background-color: grey;
+}
+#contain{
+    padding-bottom: 0px;
+    height: 588px; 
+}
+
+    
