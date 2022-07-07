@@ -23,7 +23,7 @@
     "@syncfusion/ej2-angular-charts": "^18.1.53",
     "chart.js": "^2.9.3",
     "core-js": "^2.5.4",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
